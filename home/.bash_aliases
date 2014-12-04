@@ -1,0 +1,1 @@
+/home/xlz/.bash_aliases

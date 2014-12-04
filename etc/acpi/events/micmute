@@ -1,0 +1,2 @@
+event=button[ /]micmute
+action=/usr/bin/amixer -q set Capture toggle

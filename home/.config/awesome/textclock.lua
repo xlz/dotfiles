@@ -1,0 +1,1 @@
+/home/xlz/.config/awesome/textclock.lua

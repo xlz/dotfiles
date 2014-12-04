@@ -1,0 +1,2 @@
+#event=button[ /]sleep
+#action=echo mem >/sys/power/state

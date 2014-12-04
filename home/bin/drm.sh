@@ -1,0 +1,1 @@
+/home/xlz/bin/drm.sh
