@@ -12,8 +12,13 @@ xsunpinyin -d
 
 export XMODIFIERS="@im=xsunpinyin"
 export GTK_IM_MODULE=xim
+
+# neutralize freedesktop nepotism
 export PULSE_CLIENTCONFIG=/
 export PULSE_RUNTIME_PATH=/dev/null/kill-pulseaudio
+export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/dev/null
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/dev/null
+export NO_AT_BRIDGE=1
 
 read product </sys/class/dmi/id/product_version
 [ "$product" = 'ThinkPad X240' ] && xcalib ~/.config/awesome/Lenovo_Thinkpad_Yoga.icc

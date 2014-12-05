@@ -4,8 +4,7 @@ alias l='ls'
 alias lh='ls -lh'
 alias sd='saidar -cd1'
 
-alias evince='evince 2>/dev/null'
-alias zathura='zathura --fork 2>/dev/null'
+alias zathura='zathura --fork'
 alias xsel='xsel -l /dev/null'
 
 alias wpa_cli='/sbin/wpa_cli'
@@ -14,7 +13,6 @@ alias poweroff='sudo poweroff'
 alias matlab='wmname LG3D; ~/matlab/bin/matlab -nodesktop -nosplash'
 
 alias sshproxy='ssh -qfN -D localhost:10022 -o ExitOnForwardFailure=yes'
-alias viproxy='vi ~/.config/chromium/proxy.js'
 
 alias bat='cd /sys/class/power_supply/; grep . BAT?/capacity; cd - >/dev/null'
 
