@@ -1,1 +1,2 @@
-/home/xlz/.xserverrc
+#!/bin/sh
+exec /usr/bin/X -nolisten tcp -ardelay 200 -arinterval 30 "$@" vt01

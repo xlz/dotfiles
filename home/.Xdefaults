@@ -1,1 +1,139 @@
-/home/xlz/.Xdefaults
+! Environment
+URxvt.loginShell: False
+URxvt.geometry: 118x33
+!termName:           string
+!iconName:           string
+!title:              string
+!chdir:              string
+!!utmpInhibit:        boolean
+!!hold:               boolean
+URxvt.externalBorder: 0
+URxvt.internalBorder: 0
+!URxvt.borderLess: True
+
+! Styles
+!!reverseVideo:       boolean
+URxvt.intensityStyles: True
+URxvt.fading: 30
+!!fadeColor:          color
+!*lineSpace:          number
+!*letterSpace:        number
+!skipBuiltinGlyphs: True
+
+! Scroll bar
+URxvt.scrollBar: True
+URxvt.scrollstyle: plain
+URxvt.scrollBar_right: True
+URxvt.thickness: 5
+!URXV.scrollBar_floating: boolean
+!scrollBar_align:    mode
+!scrollColor:        color
+!borderColor:        color
+
+! Scrolling
+URxvt.scrollTtyOutput: False
+URxvt.scrollTtyKeypress: True
+URxvt.scrollWithBuffer: True
+!!jumpScroll:         boolean
+!skipScroll: True
+!mouseWheelScrollPage:   boolean
+URxvt.saveLines: 8192
+
+! Bell
+URxvt.urgentOnBell: True
+!URxvt.visualBell: True
+!mapAlert:           boolean
+
+! Cursor
+!cursorUnderline:    boolean
+URxvt.cursorBlink: False
+!cursorColor:        color
+!cursorColor2:       color
+
+! Pointer
+URxvt.pointerBlank: True
+!pointerBlankDelay:  number
+!pointerColor:       color
+!pointerColor2:      color
+
+! Other Behaviors
+URxvt.pastableTabs: True
+URxvt.print-pipe: 
+!answerbackString:   string
+!insecure:           boolean
+!tripleclickwords:   boolean
+
+! Coloring (Tango)
+URxvt.background:         #000000
+URxvt.foreground:         #AAAAAA
+URxvt.color0:             #2E3436
+URxvt.color1:             #CC0000
+URxvt.color2:             #4E9A06
+URxvt.color3:             #C4A000
+URxvt.color4:             #3465A4
+URxvt.color5:             #75507B
+URxvt.color6:             #06989A
+URxvt.color7:             #D3D7CF
+URxvt.color8:             #555753
+URxvt.color9:             #EF2929
+URxvt.color10:            #8AE234
+URxvt.color11:            #FCE94F
+URxvt.color12:            #729FCF
+URxvt.color13:            #AD7FA8
+URxvt.color14:            #34E2E2
+URxvt.color15:            #EEEEEC
+URxvt.colorBD:            #FFFFFF
+!colorIT:            color
+!colorUL:            color
+!colorRV:            color
+!underlineColor:     color
+!highlightColor:     color
+!highlightTextColor: color
+
+! Font
+
+!URxvt.font: terminus-12,xft:WenQuanYi Bitmap Song:pixelsize=12
+URxvt.font: terminus-16
+
+
+!URxvt.boldFont: terminus-bold-12,xft:WenQuanYi Bitmap Song:pixelsize=12:bold
+URxvt.boldFont: terminus-bold-16
+
+URxvt.italicFont: 
+URxvt.boldItalicFont: 
+
+! Input method
+!inputMethod:        name
+!preeditType:        style
+!imLocale:           string
+URxvt.imFont: fixed
+
+! Misc
+!transient-for:      windowid
+!override-redirect:  boolean
+!secondaryScreen:    boolean
+!secondaryScroll:    boolean
+
+! Keyboard
+!backspacekey:       string
+!deletekey:          string
+!cutchars:           string
+!modifier:           modifier
+!keysym.sym:         keysym
+URxvt.keysym.M-C-0x31: command:\033]701;en_US.UTF-8\007
+URxvt.keysym.M-C-0x32: command:\033]701;zh_CN.GB18030\007
+!URxvt.perl-ext-common: clipboard
+!URxvt.keysym.M-C-c:   perl:clipboard:copy
+!URxvt.keysym.M-C-v:   perl:clipboard:paste
+!meta8:              boolean
+
+!inheritPixmap:      boolean
+!transparent:        boolean
+!tintColor:          color
+!shading:            number
+!blurRadius:         HxV
+!fading:             number
+!fadeColor:          color
+
+URxvt.iso14755: False
+URxvt.iso14755_52: False

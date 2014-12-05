@@ -1,1 +1,7 @@
-/home/xlz/bin/pngopt
+#!/bin/sh
+for i in "$@"; do
+	pngquant -v -s1 --ext .pngquant.png -f "$i"
+	optipng -v -o3 "$i"quant.png
+	advdef -z4 "$i"quant.png
+	advpng -z4 "$i"quant.png
+done
