@@ -12,13 +12,13 @@ xsunpinyin -d
 
 export XMODIFIERS="@im=xsunpinyin"
 export GTK_IM_MODULE=xim
-
-xcalib ~/.config/awesome/Lenovo_Thinkpad_Yoga.icc
-
-echo -n Boot time= >&2
-cat /proc/uptime >&2
-
 export PULSE_CLIENTCONFIG=/
 export PULSE_RUNTIME_PATH=/dev/null/kill-pulseaudio
+
+read product </sys/class/dmi/id/product_version
+[ "$product" = 'ThinkPad X240' ] && xcalib ~/.config/awesome/Lenovo_Thinkpad_Yoga.icc
+
+read uptime </proc/uptime
+echo Boot time=$uptime >&2
 
 exec x-window-manager

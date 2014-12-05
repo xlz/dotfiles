@@ -24,3 +24,5 @@ alias edp1='xrandr --output eDP1 --auto --primary --output DP2 --off'
 
 alias indigo='. /opt/ros/indigo/setup.bash'
 alias hydro='. /opt/ros/hydro/setup.bash'
+
+alias gdb='gdb -quiet'

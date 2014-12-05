@@ -95,7 +95,6 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
 -- Create a textclock widget
 mytextclock = textclock({ align = "right" }, " %a %b %e %H:%M ", 60, true)
 cal.attach(mytextclock)
---mybattery = battery({ align = "right"})
 bat.attach(mytextclock)
 
 -- Create a systray
@@ -144,7 +143,6 @@ for s = 1, screen.count() do
             layout = awful.widget.layout.horizontal.leftright
         },
         mytextclock,
---        mybattery,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -200,8 +198,8 @@ globalkeys = awful.util.table.join(
     awful.key({                   }, "Print", function () awful.util.spawn(scrot, false) end),
     awful.key({ "Shift"           }, "Print", function () awful.util.spawn(scrot .. " --focused", false) end),
     awful.key({ "Control"         }, "Print", false, function () awful.util.spawn(scrot .. " --select", false) end),
-    awful.key({ modkey,           }, "b", function () awful.util.spawn("x-www-browser --proxy-pac-url=file://" .. os.getenv("HOME") .. "/.config/chromium/proxy.js") end),
-    awful.key({ modkey,           }, "p", function () awful.util.spawn(editor_cmd .. " " .. os.getenv("HOME") .. "/.config/chromium/proxy.js") end),
+    awful.key({ modkey,           }, "b", function () awful.util.spawn("x-www-browser --proxy-pac-url=file://" .. awful.util.getdir("config") .. "/proxy.js") end),
+    awful.key({ modkey,           }, "p", function () awful.util.spawn(editor_cmd .. " " .. awful.util.getdir("config") .. "/proxy.js") end),
 
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
@@ -315,6 +313,10 @@ awful.rules.rules = {
                      focus = true,
                      keys = clientkeys,
                      buttons = clientbuttons } },
+    { rule = { class = "Chromium" },
+      properties = { border_width = 0 } },
+    { rule = { class = "spicec" },
+      properties = { border_width = 0 } },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
     { rule = { class = "pinentry" },

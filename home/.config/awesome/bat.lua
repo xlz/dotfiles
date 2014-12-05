@@ -16,6 +16,10 @@ function capacity(bat)
 end
 
 function attach(widget)
+    local f
+    f = io.open(path .. 'BAT0')
+    if f == nil then return end
+    f.close()
     function update()
         local cap = math.floor((capacity('BAT0') + capacity('BAT1')) / 2)
         widget.text = tonumber(cap) .. widget.text

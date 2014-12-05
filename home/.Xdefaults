@@ -46,7 +46,7 @@ URxvt.urgentOnBell: True
 
 ! Cursor
 !cursorUnderline:    boolean
-URxvt.cursorBlink: False
+URxvt.cursorBlink: True
 !cursorColor:        color
 !cursorColor2:       color
 
@@ -93,11 +93,11 @@ URxvt.colorBD:            #FFFFFF
 ! Font
 
 !URxvt.font: terminus-12,xft:WenQuanYi Bitmap Song:pixelsize=12
-URxvt.font: terminus-16
+URxvt.font: terminus-12
 
 
 !URxvt.boldFont: terminus-bold-12,xft:WenQuanYi Bitmap Song:pixelsize=12:bold
-URxvt.boldFont: terminus-bold-16
+URxvt.boldFont: terminus-bold-12
 
 URxvt.italicFont: 
 URxvt.boldItalicFont: 
@@ -106,7 +106,7 @@ URxvt.boldItalicFont:
 !inputMethod:        name
 !preeditType:        style
 !imLocale:           string
-URxvt.imFont: fixed
+URxvt.imFont: terminus-12
 
 ! Misc
 !transient-for:      windowid

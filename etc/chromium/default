@@ -4,7 +4,7 @@
 # Options to pass to chromium
 CHROMIUM_FLAGS="--password-store=detect"
 
-# discard error logging
+# Privacy: chromium dumps tons of info to stderr
 exec 2>/dev/null
 
 # part for pepperflashplugin-nonfree : begin
