@@ -93,7 +93,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = textclock({ align = "right" }, " %a %b %e %H:%M ", 60, true)
+mytextclock = textclock({ align = "right" }, " %a %b %e %H:%M ", 60)
 cal.attach(mytextclock)
 bat.attach(mytextclock)
 

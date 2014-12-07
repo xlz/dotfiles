@@ -1,7 +1,3 @@
----------------------------------------------------------------------------
--- there is a bug with daylight saving time
----------------------------------------------------------------------------
-
 local setmetatable = setmetatable
 local os = os
 local capi = { widget = widget,
@@ -15,23 +11,19 @@ module("textclock")
 -- @param format The time format. Default is " %a %b %d, %H:%M ".
 -- @param timeout How often update the time. Default is 60.
 -- @return A textbox widget.
-function new(args, format, timeout, align)
+function new(args, format, timeout)
     local args = args or {}
     local format = format or " %a %b %d, %H:%M "
     local timeout = timeout or 60
     args.type = "textbox"
     local w = capi.widget(args)
     local timer = capi.timer { timeout = timeout }
-    if align then
-        timer:add_signal("timeout", function()
-            timer.timeout = timeout - os.time() % timeout
-            timer:again()
-            w.text = os.date(format)
-            w:emit_signal("timeout")
-        end)
-    else
-        timer:add_signal("timeout", function() w.text = os.date(format) end)
-    end
+    timer:add_signal("timeout", function()
+        timer.timeout = timeout - os.time() % timeout
+        timer:again()
+        w.text = os.date(format)
+        w:emit_signal("timeout")
+    end)
     timer:start()
     timer:emit_signal("timeout")
     w.timer = timer
