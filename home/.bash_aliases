@@ -4,7 +4,7 @@ alias l='ls'
 alias lh='ls -lh'
 alias sd='saidar -cd1'
 
-alias zathura='zathura --fork'
+alias zathura='zathura --fork 2>/dev/null'
 alias xsel='xsel -l /dev/null'
 
 alias wpa_cli='/sbin/wpa_cli'
