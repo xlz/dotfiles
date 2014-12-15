@@ -1,0 +1,46 @@
+#!/bin/sh
+#params='root=/dev/sda2 ro quiet panic=9 video=efifb:off acpi_osi="!Windows 2012" acpi_osi="!Windows 2013" initrd=EFI/debian/initrd.img'
+#efibootmgr -c -L "Debian" -l '\EFI\debian\vmlinuz.efi' -v -u "$params"
+
+ESP=/boot/efi
+mountpoint -q $ESP || MOUNTESP=yes
+if [ "$MOUNTESP" ]; then
+  if ! mount $ESP; then
+    echo EFI system partition not mounted >&2
+    exit 1
+  fi
+fi
+
+BOOTDIR=$ESP/EFI/debian
+if [ ! -d $BOOTDIR ]; then
+  echo EFI system partition directory not found >&2
+  umount $ESP
+  exit 1
+fi
+cd $BOOTDIR
+
+if [ ! -e /vmlinuz ]; then
+  echo /vmlinuz not found >&2
+  exit 1
+fi
+
+alias cp='cp >&2 -aLv'
+alias mv='mv >&2 -v'
+if [ -e /vmlinuz.old ]; then
+  cp /vmlinuz vmlinuz.efi
+  cp /vmlinuz.old vmlinuz-old.efi
+  cp /initrd.img initrd.img
+  cp /initrd.img.old initrd-old.img
+elif ! diff -q /vmlinuz vmlinuz.efi; then
+  mv vmlinuz.efi vmlinuz-old.efi
+  cp /vmlinuz vmlinuz.efi
+  mv initrd.img initrd-old.img
+  cp /initrd.img initrd.img
+fi
+
+if [ "$MOUNTESP" ]; then
+  cd /
+  umount $ESP
+fi
+
+exit 0
