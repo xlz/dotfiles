@@ -1,0 +1,5 @@
+Aptitude::Get-Root-Command "sudo:/usr/bin/sudo";
+aptitude::UI::Prompt-On-Exit "false";
+aptitude::UI::HelpBar "false";
+aptitude::UI::Menubar-Autohide "true";
+aptitude::UI::Minibuf-Prompts "true";
