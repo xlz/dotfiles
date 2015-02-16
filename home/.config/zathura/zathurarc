@@ -58,6 +58,7 @@ set window-height 1000
 # set exec-commandfalse# set guioptions "s"
 set guioptions ""
 # set smooth-scroll false
+set smooth-scroll true
 
 # set database plain
 # set zoom-step 10
