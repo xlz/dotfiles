@@ -22,6 +22,7 @@ function attach(widget)
             now = os.date('*t')
         end
         now.day = 1
+        now.hour = 12 -- in case of daylight saving
         now = date('*t', now)
         local month = now.month
         local month_year = date('%B %Y', now)
