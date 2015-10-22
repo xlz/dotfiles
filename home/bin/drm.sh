@@ -6,6 +6,8 @@ read status </sys/class/drm/card0-DP-2/status
 if [ "$status" = connected ]; then
 	sleep 1 # sometime it takes a while to query optimal settings
 	xrandr --output eDP1 --auto --primary --output DP2 --auto --same-as eDP1
+#	xrandr --output eDP1 --mode 1024x768 --primary --output DP2 --auto --same-as eDP1
 else
 	xrandr --output DP2 --off
+	xrandr --output eDP1 --auto
 fi
