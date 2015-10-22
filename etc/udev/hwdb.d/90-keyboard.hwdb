@@ -1,8 +1,8 @@
 # freedesktop abuses f20 for micmute, revert it
-keyboard:name:ThinkPad Extra Buttons:dmi:bvn*:bvr*:bd*:svnLENOVO*:pn*
+evdev:name:ThinkPad Extra Buttons:dmi:bvn*:bvr*:bd*:svnLENOVO*:pn*
  KEYBOARD_KEY_1a=micmute
 
 # swap end/insert on Thinkpad X240
-keyboard:dmi:bvn*:bvr*:bd*:svnLENOVO*:pn*:pvr*
+evdev:atkbd:dmi:bvn*:bvr*:bd*:svnLENOVO*:pn*:pvr*
  KEYBOARD_KEY_cf=insert
  KEYBOARD_KEY_d2=end
