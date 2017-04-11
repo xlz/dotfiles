@@ -59,7 +59,6 @@ modkey = "Mod4"
 layouts =
 {
     awful.layout.suit.floating,
-    awful.layout.suit.fair
 }
 -- }}}
 
@@ -198,7 +197,7 @@ globalkeys = awful.util.table.join(
     awful.key({                   }, "Print", function () awful.util.spawn(scrot, false) end),
     awful.key({ "Shift"           }, "Print", function () awful.util.spawn(scrot .. " --focused", false) end),
     awful.key({ "Control"         }, "Print", false, function () awful.util.spawn(scrot .. " --select", false) end),
-    awful.key({ modkey,           }, "b", function () awful.util.spawn("/bin/sh -c 'exec chromium --proxy-pac-url=file://" .. awful.util.getdir("config") .. "/proxy.js 2>/dev/null'") end),
+    awful.key({ modkey,           }, "b", function () awful.util.spawn("/bin/sh -c 'exec chromium --enable-remote-extensions --proxy-pac-url=file://" .. awful.util.getdir("config") .. "/proxy.js 2>/dev/null'") end),
     awful.key({ modkey,           }, "p", function () awful.util.spawn(editor_cmd .. " " .. awful.util.getdir("config") .. "/proxy.js") end),
 
     awful.key({ modkey, "Control" }, "r", awesome.restart),

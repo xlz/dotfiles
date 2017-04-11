@@ -8,7 +8,7 @@ alias p='python -ic "from __future__ import division; from math import *; import
 alias zathura='zathura --fork 2>/dev/null'
 alias xsel='xsel -l /dev/null'
 
-alias wpa_cli='/sbin/wpa_cli'
+alias wpa_cli='/sbin/wpa_cli -i wlan0'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 alias matlab='wmname LG3D; ~/matlab/bin/matlab -nodesktop -nosplash'

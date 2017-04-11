@@ -2,3 +2,5 @@
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="1483", ATTRS{idProduct}=="c007", GROUP="plugdev", MODE="0664"
 # China Contruction Bank
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="163c", ATTRS{idProduct}=="5471", GROUP="plugdev", MODE="0664"
+# USB
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="090c", ATTRS{idProduct}=="1000", GROUP="plugdev", MODE="0664"
