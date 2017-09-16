@@ -1,0 +1,6 @@
+This directory:
+
+    00-NotoSansCJKsc-hinted/
+
+must remain directly under ~/.local/share/fonts/ to override fonts-noto-cjk's
+OTC fonts at cache level.
