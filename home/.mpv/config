@@ -1,4 +1,0 @@
-screenshot-format=png
-screenshot-png-compression=0
-screenshot-template=~/shots/mpv-%tF-%tH%tM%tS-%P
-ao=alsa

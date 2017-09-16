@@ -1,7 +1,0 @@
-Package: libpulse0
-Pin: version 4.0-6~bpo7+1
-Pin-Priority: 999
-
-Package: bsdutils
-Pin: version 2.20.1-5.11
-Pin-Priority: 999
