@@ -1,3 +1,0 @@
-SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="0", RUN+="/usr/sbin/pm-powersave true"
-SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="/usr/sbin/pm-powersave false"
-SUBSYSTEM=="power_supply", ACTION=="add", ENV{POWER_SUPPLY_NAME}=="AC", RUN+="/usr/sbin/pm-powersave"

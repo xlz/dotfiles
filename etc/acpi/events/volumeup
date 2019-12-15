@@ -1,2 +1,0 @@
-event=button[ /]volumeup
-action=/usr/bin/amixer -qM set Master 10%%+

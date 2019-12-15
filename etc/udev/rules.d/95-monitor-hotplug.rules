@@ -1,1 +1,0 @@
-SUBSYSTEM=="drm", ACTION=="change", ENV{HOTPLUG}=="1", RUN+="/home/xlz/bin/drm.sh"

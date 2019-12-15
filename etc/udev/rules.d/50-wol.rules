@@ -1,1 +1,0 @@
-ACTION=="add|change", SUBSYSTEM=="net", KERNEL=="eth*", RUN+="/sbin/ethtool -s %k wol d"

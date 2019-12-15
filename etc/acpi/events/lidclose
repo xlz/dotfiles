@@ -1,2 +1,0 @@
-#event=button[ /]lid.*close
-#action=pm-suspend
