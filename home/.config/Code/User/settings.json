@@ -45,10 +45,6 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, AllowShortIfStatementsOnASingleLine: false, AllowShortLoopsOnASingleLine: false }",
-    "C_Cpp.clang_format_path": "/usr/bin/clang-format-9",
-    "C_Cpp.default.includePath": [
-        "${workspaceFolder}/**"
-    ],
     "C_Cpp.default.intelliSenseMode": "gcc-x64",
     "C_Cpp.default.cppStandard": "c++14",
     "C_Cpp.default.cStandard": "c99"

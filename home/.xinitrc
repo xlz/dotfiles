@@ -20,4 +20,6 @@ read product </sys/class/dmi/id/product_version
 read uptime </proc/uptime
 echo Boot time=$uptime date=`date +%s` >&2
 
+xrandr --output DP1 --brightness 0.8
+
 exec x-window-manager

@@ -1,3 +1,5 @@
+Xcursor.size: 32
+
 ! Environment
 URxvt.loginShell: False
 URxvt.geometry: 118x33
@@ -92,10 +94,10 @@ URxvt.colorBD:            #FFFFFF
 
 ! Font
 
-URxvt.font: terminus-12,xft:WenQuanYi Bitmap Song:pixelsize=12
+URxvt.font: terminus-20,xft:WenQuanYi Bitmap Song:pixelsize=20
 
 
-URxvt.boldFont: terminus-bold-12,xft:WenQuanYi Bitmap Song:pixelsize=12:bold
+URxvt.boldFont: terminus-bold-20,xft:WenQuanYi Bitmap Song:pixelsize=20:bold
 
 URxvt.italicFont: 
 URxvt.boldItalicFont: 
@@ -104,7 +106,7 @@ URxvt.boldItalicFont:
 !inputMethod:        name
 !preeditType:        style
 !imLocale:           string
-URxvt.imFont: terminus-12
+URxvt.imFont: terminus-20
 
 ! Misc
 !transient-for:      windowid
