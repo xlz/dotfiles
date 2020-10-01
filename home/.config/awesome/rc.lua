@@ -12,7 +12,6 @@ require("debian.menu")
 
 require("textclock")
 require("cal")
-require("bat")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -94,7 +93,6 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
 -- Create a textclock widget
 mytextclock = textclock({ align = "right" }, " %a %b %e %H:%M ", 60)
 cal.attach(mytextclock)
-bat.attach(mytextclock)
 
 -- Create a systray
 mysystray = widget({ type = "systray" })
@@ -198,6 +196,7 @@ globalkeys = awful.util.table.join(
     awful.key({ "Shift"           }, "Print", function () awful.util.spawn(scrot .. " --focused", false) end),
     awful.key({ "Control"         }, "Print", false, function () awful.util.spawn(scrot .. " --select", false) end),
     awful.key({ modkey,           }, "b", function () awful.util.spawn("/bin/sh -c 'exec chromium --enable-remote-extensions --force-device-scale-factor=2 2>/dev/null'") end),
+    awful.key({ modkey,           }, "v", function () awful.util.spawn("/bin/sh -c 'exec code --force-device-scale-factor=2 2>/dev/null'") end),
     awful.key({ modkey,           }, "p", function () awful.util.spawn(editor_cmd .. " " .. awful.util.getdir("config") .. "/proxy.js") end),
 
     awful.key({ modkey, "Control" }, "r", awesome.restart),

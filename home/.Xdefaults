@@ -117,16 +117,20 @@ URxvt.imFont: terminus-20
 ! Keyboard
 !backspacekey:       string
 !deletekey:          string
-!cutchars:           string
+URxvt.cutchars: "\\`\"'&()*,:;<=>?@[]^{|}"
 !modifier:           modifier
 !keysym.sym:         keysym
-URxvt.keysym.M-C-0x31: command:\033]701;en_US.UTF-8\007
-URxvt.keysym.M-C-0x32: command:\033]701;zh_CN.GB18030\007
 !URxvt.perl-ext-common: clipboard
 !URxvt.keysym.M-C-c:   perl:clipboard:copy
 !URxvt.keysym.M-C-v:   perl:clipboard:paste
+URxvt.keysym.C-M-c: builtin-string:
+URxvt.keysym.C-M-v: builtin-string:
+URxvt.keysym.C-S-C: eval:selection_to_clipboard
+URxvt.keysym.C-S-V: eval:paste_clipboard
 !meta8:              boolean
 
+URxvt.perl-ext:
+!URxvt.perl-ext-common:
 !inheritPixmap:      boolean
 !transparent:        boolean
 !tintColor:          color
